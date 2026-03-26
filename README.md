@@ -26,6 +26,45 @@ Before deploying this on **Mainnet**, please test it thoroughly on **Testnet** o
 ## 📦 Installation
 
 1. Clone the repository to your local machine or server:
-   ```bash
+   bash
    git clone https://github.com/YOUR_USERNAME/bitcoin-telegram-gateway.git
    cd bitcoin-telegram-gateway
+
+##Install the required Python dependencies:
+
+***code***
+Bash
+pip install -r requirements.txt
+
+##Configure your Bitcoin Core bitcoin.conf file (Example for Testnet):
+
+***code***
+Ini
+testnet=1
+server=1
+rpcuser=your_secure_rpc_username
+rpcpassword=your_secure_rpc_password
+rpcallowip=127.0.0.1
+rpcport=18332
+
+(Do not forget to restart bitcoind after making changes)
+
+***⚙️ Configuration***
+Open bitcoin_gateway.py and scroll down to the MAIN EXECUTION BLOCK to enter your credentials:
+
+***code***
+Python
+RPC_USER = "your_secure_rpc_username"
+RPC_PASSWORD = "your_secure_rpc_password"
+RPC_PORT = 18332 # Testnet: 18332, Mainnet: 8332
+
+TELEGRAM_BOT_TOKEN = "your_bot_token_from_botfather" 
+TELEGRAM_CHAT_ID = "your_personal_or_group_chat_id"
+
+## 🚀 Usage
+Once configured, simply run the script:
+
+***code***
+Bash
+python bitcoin_gateway.py
+The system will initialize the database, optionally create a demo invoice, and enter a continuous monitoring loop to watch for payments.
