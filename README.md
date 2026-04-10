@@ -69,6 +69,5 @@ Bash
 python bitcoin_gateway.py
 The system will initialize the database, optionally create a demo invoice, and enter a continuous monitoring loop to watch for payments.
 
-₿ Support / Donate
 
-BTC Address: bc1ql0nevlj2ygh9tejy47g3yd06l7hjh64raywzv4
+qTox contact: 18EAB3D22CD3B9773AF7FBF51E818C8DA779048DF561B497FE944D6E1B92097883DBA8B805E3
